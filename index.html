@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nikita Hari | Global Keynote Speaker & Academic Leader</title>
+    <style>
+        :root {
+            /* Stark, high-end Black & White minimalist luxury palette */
+            --bg-primary: #FFFFFF;      
+            --bg-surface: #FAFACA;      /* Completely clean white elements */
+            --text-main: #000000;       /* Jet black for heavy contrast text */
+            --text-muted: #555555;      /* Slate grey for secondary text */
+            --accent-dark: #111111;     
+            --border-color: #000000;    /* Crisp black borders for an editorial feel */
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Clean, high-contrast typography-driven header */
+        header {
+            background: #FFFFFF;
+            padding: 8rem 2rem 5rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        header .subtitle {
+            color: var(--text-main);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        header h1 {
+            color: var(--text-main);
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            margin: 0 auto 1.5rem auto;
+            max-width: 950px;
+            line-height: 1.1;
+        }
+
+        header .meta-tag {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        header .meta-tag strong {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        .intro-container {
+            max-width: 900px;
+            margin: -2rem auto 4rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .intro-box {
+            background: #000000;
+            color: #FFFFFF;
+            padding: 2.5rem;
+            border-radius: 0px; /* Sharp corners for executive design */
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .intro-box p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .framework-section {
+            max-width: 1100px;
+            margin: 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .framework-section h2 {
+            text-align: center;
+            color: var(--text-main);
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        /* Editorial split columns */
+        .pillars-section {
+            max-width: 1100px;
+            margin: 2rem auto 5rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .pillar-card {
+            background: #FFFFFF;
+            border: 2px solid var(--border-color);
+            border-radius: 0px; /* Minimalist sharp aesthetic */
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pillar-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .pillar-card h3 {
+            margin: 0 0 1.5rem 0;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-transform: uppercase;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 0.5rem;
+        }
+
+        .pillar-list {
+            padding-left: 1.25rem;
+            margin: 0;
+            line-height: 1.9;
+            color: var(--text-muted);
+        }
+
+        .pillar-list li {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .pillar-list strong {
+            color: var(--text-main);
+        }
+
+        /* Stark Theater Component for the Native MP4 Video Reel */
+        .video-section {
+            max-width: 950px;
+            margin: 6rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .video-theatre {
+            background: #FFFFFF;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .video-top-bar {
+            background: #000000;
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #FFFFFF;
+        }
+
+        .video-screen {
+            background: #000000;
+            padding: 0.5rem;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000000;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .video-footer {
+            background: #FFFFFF;
+            padding: 1.5rem 2rem;
+            border-top: 2px solid var(--border-color);
+            text-align: center;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        /* High-Converting Form Engine Wrap */
+        .registration-section {
+            max-width: 950px;
+            margin: 5rem auto 7rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .registration-section p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .form-container {
+            border: 2px solid var(--border-color);
+            background: #FFFFFF;
+            margin-top: 2rem;
+        }
+
+        .form-container iframe {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Black and White Badges */
+        .badge {
+            background: #000000;
+            color: #FFFFFF;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 0.7rem;
+            border-radius: 0px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .pillars-section { grid-template-columns: 1fr; gap: 2rem; }
+            header { padding: 5rem 1rem 3rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Executive Clean Header Section -->
+    <header>
+        <div class="subtitle">Global Keynote Speaker • Oxford Academic Leader</div>
+        <h1>Advancing Engineering Innovation, Technology Policy, and Educational Design</h1>
+        <div class="meta-tag">
+            Hosted by <strong>Dr. Nikita Hari</strong> — Head of the Teaching and Design Research Group at the University of Oxford. Bridging advanced engineering, global technology policy, and systemic workforce transformation.
+        </div>
+    </header>
+
+    <div class="intro-container">
+        <div class="intro-box">
+            <p>"True global transformation happens when cutting-edge engineering principles intersect with inclusive pedagogical design and strategic technological policy."</p>
+        </div>
+    </div>
+
+    <!-- Main Deliverables Grid Layout -->
+    <section class="framework-section">
+        <h2>Keynote Focus Areas & Engagements</h2>
+        <div class="pillars-section">
+            
+            <!-- COLUMN 1: TECH INNOVATION -->
+            <div class="pillar-card">
+                <div>
+                    <div class="pillar-icon">▪</div>
+                    <h3>Tech Innovation & Global Sustainability</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem;">Deconstructing fast-moving technological trends to help corporate boards, venture funds, and public policy international forums navigate modern engineering transformations clean.</p>
+                    <ul class="pillar-list">
+                        <li><strong>Engineering the Future:</strong> Comprehensive insight into smart grid infrastructures, power electronics, and sustainable energy development.</li>
+                        <li><strong>Women in STEM Leadership:</strong> Strategic execution models designed to accurately scale and retain elite, diverse technical talent within high-stakes corporate enterprise pipelines.</li>
+                        <li><strong>Venture Strategy & Tech Policy:</strong> Frameworks aligning world-class academic research breakthroughs directly with enterprise venture investments and international regulatory systems.</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 3rem; border-top: 1px solid #E5E7EB; padding-top: 1.5rem;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="badge">Energy Systems</span>
+                        <span class="badge">Tech Policy</span>
+                        <span class="badge">STEM Diversity</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: EDUCATION DESIGN -->
+            <div class="pillar-card">
+                <div>
+                    <div class="pillar-icon">▪</div>
+                    <h3>Educational Design & Institutional Excellence</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.05rem;">Utilizing tier-one executive insights from the University of Oxford to engineer next-generation curriculum standards and highly optimized technical workforce upskilling tracks.</p>
+                    <ul class="pillar-list">
+                        <li><strong>Design Research Paradigms:</strong> Constructing powerful, iterative educational design matrices that effectively modernize traditional global engineering structures.</li>
+                        <li><strong>Institutional Leadership:</strong> Executing high-end pedagogical parameters designed to optimize long-form engagement metrics across elite global learning systems.</li>
+                        <li><strong>Workforce Transformation:</strong> Structuring elite knowledge-transfer mechanisms to upskill corporate enterprise groups into competitive technical and digital arenas.</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 3rem; border-top: 1px solid #E5E7EB; padding-top: 1.5rem;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="badge">Design Research</span>
+                        <span class="badge">Oxford Pedagogy</span>
+                        <span class="badge">Workforce Upskilling</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Native Media Theatre Component Block -->
+    <section class="video-section">
+        <div class="video-theatre">
+            <div class="video-top-bar">
+                <div style="font-weight:700; letter-spacing: 0.5px;">SPEAKER REEL • DR. NIKITA HARI LIVE</div>
+                <span style="font-size:0.75rem; font-weight:700; letter-spacing: 1px; opacity:0.7;">NATIVE PLAYER</span>
+            </div>
+            <div class="video-screen">
+                <div class="video-wrapper">
+                    <!-- Configured native file path named exactly for her local video reel storage -->
+                    <video controls preload="metadata">
+                        <source src="nikita-speaker-reel.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="video-footer">
+                A compilation of international keynote presentations, corporate panel discussions, and university policy briefings.
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Booking Form Section Wrap -->
+    <section class="registration-section">
+        <h2>Retain Dr. Nikita Hari for Your Next Engagement</h2>
+        <p>Please submit your corporate summit, academic chairing appointment, or executive panel request details below to evaluate scheduling parameters and honorarium criteria:</p>
+        <div class="form-container">
+            
+            <!-- Embedded Google Form Link Framework Placeholder -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdczUNtx-O3Gr3mMvJ_EZTqWMG0OhxTZJThdXDMw9HYYlKUuw/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            
+        </div>
+    </section>
+
+</body>
+</html>
